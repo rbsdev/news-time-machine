@@ -68,6 +68,62 @@ html {
 	opacity: 0.7;
 }
 
+/** SEARCH **/
+.search-box{
+	left: 95px;
+	padding: 0 10px;
+}
+
+.search-box .icon-search {
+	color: #FFF;
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	cursor: pointer;
+	text-indent: -999px;
+	background: url(../images/ico-lupa.png) no-repeat center center;
+	background-size: 20px 20px;
+}
+
+.search-box .searchform {
+	width: 350px;
+	height: 33px;
+	overflow: hidden;
+	vertical-align: middle;
+	display: inline-block;
+	-ms-transition: opacity .15s ease-in;
+	-moz-transition: opacity .15s ease-in;
+	transition: opacity .15s ease-in;
+}
+
+.search-box.active .searchform {opacity: 1;}
+
+.search-box .screen-reader-text {
+	width: 0px;
+	height: 0px;
+	vertical-align: middle;
+	display: inline-block;
+	color: transparent;
+}
+
+.search-box input[type="text"] {
+	padding: 10px;
+	width: 83%;
+	border: none;
+	border-radius: 1px;
+	vertical-align: middle;
+}
+
+.search-box input[type="submit"] {
+	background-color: #f6ca1b;
+	padding: 10px;
+	border: none;
+	color: #fff;
+	vertical-align: middle;
+}
+
 .post-time,
 .categ-name,
 .author-name {
@@ -187,7 +243,7 @@ html {
 
 .line-posts div:hover,
 .line-posts div:hover h3,
-.line-posts div:hover .post-time {color: #fff; background-color: rgba(241, 44, 73, .90)}
+.line-posts div:hover .post-time {color: #fff; background-color: rgba(241, 216, 26, 0.9)}
 
 .line-posts h3 {
 	padding-top: 30px;
@@ -204,7 +260,7 @@ html {
 }
 
 .line-posts > div:hover a {
-	background-color: rgba(241, 44, 73, .90) !important;
+	background-color: rgba(241, 216, 26, 0.9) !important;
 }
 
 .line-posts .wp-post-image {
@@ -296,7 +352,7 @@ html {
 .more-posts a {padding-bottom: 20px ;display: block; text-decoration: none;}
 
 .more-posts a:hover {
-	background-color:  rgba(241, 44, 73, .90);
+	background-color:  rgba(241, 216, 26, 0.9);
 	color: #FFF;
 }
 .more-posts a:hover * {color: #fff;}
@@ -460,66 +516,39 @@ a.post-edit-link {
 		padding-top: 62px;
 	}
 
-	.categ-title {
-		padding: 0 0 10px;
-		text-align: center;
-		width: 100%;
-	}
-
 	.highlight-home {
 		padding: 15px 0 25px;
 		margin-bottom: 20px;
 	}
-
-	.highlight-home .comments-number {display: none;}
 
 	.highlight-home h1 {
 		font: 2rem/2.3rem sans-serif;
 		padding: 0 15px 30px;
 	}
 
-	.highlight-home .post-time,
-	.highlight-home span {padding: 0;}
-	.highlight-home .categ-name {display: block; padding: 10px;}
+	.highlight-home .post-time{padding: 0;}
 
-	.search-box {
-		position: absolute;
+	.search-box {		
 		left: auto;
 		right: 0;
 		width: 20px;
-		display: none;
 	}
 
 	.search-box .searchform {
-		opacity: 0
+		opacity: 1
 	}
 
-	.search-box.active .searchform {opacity: 1;}
-	.search-box.active {width: 100%;}
+	.search-box .searchform {opacity: 1;}
+	.search-box {width: 102%;}
 
-	.search-box input[type="text"] {width: 52%;}
+	.search-box input[type="text"] {width: 82%;}
 
 	.search-box .icon-search {
-		position: absolute;
 		right: 10px;
 	}
 
 	.container {
 		width: 100%;
-	}
-
-	.text-intro {padding: 20px 0 25px;}
-	.text-intro .container {padding: 0 20px;}
-
-	.text-intro h1 {
-		font-size: 2.5rem;
-		line-height: 1;
-		padding-bottom: 25px;
-	}
-
-	.text-intro p {
-		font-size: 1.4rem;
-		line-height: 1.4;
 	}
 
 	.line-posts,
@@ -530,10 +559,6 @@ a.post-edit-link {
 		overflow: hidden;
 		padding-bottom: 20px;
 	}
-
-	.comments-number {position: absolute; top: 0; right: 0;}
-	.categ-name {float: right;  margin: 0; padding: 0;}
-	.author-name {float: left;}
 
 	.line-posts > div,
 	.home .line-posts > div {
@@ -555,47 +580,9 @@ a.post-edit-link {
 		padding-top: 10px;
 	}
 
-	.line-posts .wp-post-image {
-		width: auto;
-		height: auto;
-	}
-
-	.archive .line-posts > div,
-	.category .line-posts > div {
-		width: 100%;
-	}
-
-	.more-posts div {
-		width: 100%;
-		border-top: 1px solid rgba(0,0,0,0.1);
-		margin-top: 20px;
-	}
-
 	/** FOOTER **/
 	.footer {
 		padding: 20px 0 0px;
-	}
-
-	.footer h1 {
-		display: none;
-	}
-
-	.footer nav {
-		width: 100%;
-		display: block;
-		text-align: center;
-		margin-left: 0;
-	}
-
-	.footer nav h4 {
-		padding-top: 40px;
-		margin-bottom: 10px;
-	}
-
-	.footer nav li a {
-		font-size: 1rem;
-		display: block;
-		padding: 10px 0;
 	}
 
 	p.credit {
