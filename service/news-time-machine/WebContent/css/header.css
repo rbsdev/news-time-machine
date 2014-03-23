@@ -1,0 +1,223 @@
+/** HEADER **/
+.header {
+	background-color: rgba(31, 31, 31, 0.95);
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+}
+
+.header .container {
+	position: relative;
+}
+
+/** MENU **/
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+	-webkit-transform: translate3D(-265px, 0, 0);
+	-moz-transform: translate3D(-265px, 0, 0);
+	-ms-transform: translate3D(-265px, 0, 0);
+	transform: translate3D(-265px, 0, 0);
+	transition: transform .25s ease-in;
+	transition: -webkit-transform .25s ease-in;
+	transition: -moz-transform .25s ease-in;
+	transition: -ms-transform .25s ease-in;
+}
+
+.with-sidebar .main-menu {
+	-webkit-transform: translate3D(0, 0, 0);
+	-moz-transform: translate3D(0, 0, 0);
+	-ms-transform: translate3D(0, 0, 0);
+	transform: translate3D(0, 0, 0);
+}
+
+.main-menu .inner-menu {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	-moz-overflow-scrolling: touch;
+	-ms-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+  width: 220px;
+  height: 100%;
+  z-index: 1;
+  background: #f6ca1b;
+}
+
+.main-menu ul {list-style: none;}
+
+.ico-menu {
+	position: relative;
+	z-index: 1;
+	background: #f6ca1b url(../images/ico-menu.png) no-repeat 10px 12px;
+	background-size: 15px 10px;
+	color: #FFF;
+	font: 0.75rem/0.75rem SofiaRegular, Times, Sans-serif;
+	text-transform: uppercase;
+	padding: 12px 10px 9px 30px;
+	border-radius: 2px;
+	display: inline-block;
+	cursor: pointer;
+	float: left;
+}
+
+.main-menu li a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+.main-menu li:last-child a {border: none;}
+
+.main-menu li a:hover {
+	border-bottom-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+span.hide-menu {
+	position: absolute;
+	top: 0;
+	right: -40px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	color: #f6ca1b;
+	background-color: #fff;
+	font: bold 20px/40px arial;
+	text-align: center;
+	cursor: pointer;
+}
+
+.inner-menu .categ-menu {
+	background: rgba(0,0,0,.15);
+}
+
+.inner-menu .categ-menu:before {
+  font-size: .8rem;
+	content:"Categorias";
+	padding: 15px 10px 10px;
+	display: block;
+	margin-top: 20px;
+	text-transform: uppercase;
+	background-color: rgba(0, 0, 0, 0.25);
+	color: #fff;
+}
+
+/** LOGO **/
+.logo {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+}
+
+.logo a {
+	display: block;
+	text-align: center;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(../images/logo-header.png) no-repeat center;
+	background-size: contain;
+	height: 30px;
+}
+
+/** Links Social Header **/
+.social-links {
+	position: absolute;
+	right: 20px;
+	top: 8px;
+}
+
+.social-links li {display: inline; list-style: none;}
+
+.social-links li a {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(../images/social-icons.png) no-repeat;
+	margin-left: 10px;
+	opacity: 0.7;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.social-links li a:hover {opacity:1;}
+
+.social-links a.ico-twitter,
+.social-links li:nth-child(1) a {background-position: -50px center;}
+
+.social-links a.ico-facebook,
+.social-links li:nth-child(2) a {background-position: -90px center;}
+
+/*** MENU CATEGS ***/
+.second-menu {
+	background-color: #f3f2f1;
+	text-align: center;
+	clear: both;
+	display: block;
+	border-bottom: 1px solid #fff;
+}
+
+.second-menu li {
+	display: inline;
+	list-style: none;
+}
+
+.second-menu li a {
+	padding: 15px;
+	font-size: .88rem;
+	height: 100%;
+	color: #1f1f1f;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.second-menu li a:hover, li.current-menu-item a {
+	background-color: #f6ca1b;
+	color: #fff;
+}
+
+@media screen and (max-width: 1140px) {
+	.second-menu li a {
+		font-size: .8rem;
+		padding: 10px;
+	}
+}
+@media screen and (max-width: 980px) {
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.ico-menu {
+		z-index: 2;
+		position: relative;
+		left: -10px;
+		-webkit-transition: -webkit-transform .25s ease-in;
+	}
+
+	.with-sidebar .ico-menu {
+		-webkit-transform: translate3D(215px, 0, 0);
+	}
+
+	.main-menu .inner-menu {
+		position: fixed;
+	  top: 0;
+	  left: 0;
+	}	
+
+	span.hide-menu,
+	.social-links,
+	.second-menu {
+		display: none;
+	}
+
+}
