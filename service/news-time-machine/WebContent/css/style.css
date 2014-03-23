@@ -97,6 +97,7 @@ html {
 	border: none;
 	color: #fff;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .post-time{
