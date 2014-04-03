@@ -63,7 +63,7 @@ html {
 }
 
 .search-box .searchform {
-	width: 412px;
+	width: 512px;
 	height: 33px;
 	overflow: hidden;
 	vertical-align: middle;
@@ -91,7 +91,7 @@ html {
 	vertical-align: middle;
 }
 
-.search-box input[type="submit"] {
+.search-box input[type="button"] {
 	background-color: #f6ca1b;
 	padding: 10px;
 	border: none;
